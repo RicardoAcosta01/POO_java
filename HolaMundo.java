@@ -1,10 +1,8 @@
 public class HolaMundo { 
     public static void main() { 
-        Mascota m1 = new Mascota();
-
-        m1.nombre = "Firulais";
-        m1.edad = 3;
-    
-        m1.Presentar();
+        Mascota m1 = new Mascota("Pablo", 4);   
+        Mascota m2 = new Mascota("Juan", 2);   
+        m1.presentar();
+        m2.presentar();
     } 
 }

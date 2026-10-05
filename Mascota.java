@@ -1,7 +1,7 @@
 public class Mascota {
     // Atributos
-    String nombre;
-    int edad;
+    private String nombre;
+    private int edad;
 
     // Constructor
     public Mascota (String nombre, int edad) {
@@ -9,9 +9,30 @@ public class Mascota {
         this.edad = edad;
     }
 
-    // Metodos
-    public void presentar() {
-        System.out.println("Este es " + nombre + " y tiene " +edad +" añitos");
+    // Getter
+    public String getNombre() {
+        return this.nombre;
+    }
+    
+    public int getEdad() {
+        return this.edad;
+    }
+    
+    // Setters
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
+    public void setEdad(int edad) {
+        if (edad >=0) {
+            this.edad = edad;
+        } else {
+            System.out.println("Error: la edad no puede ser negativa");
+        } 
+    }
+
+    // Metodos
+    public void presentar() {
+        System.out.println("Este es " + this.nombre + " y tiene " +this.edad +" añitos");
+}
 }

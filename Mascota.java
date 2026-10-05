@@ -5,23 +5,22 @@ public class Mascota {
 
     // Constructor
     public Mascota (String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
+        this.setNombre(nombre);
+        this.setEdad(edad);
     }
 
-    // Getter
+    // Getter & Setters
     public String getNombre() {
         return this.nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
     public int getEdad() {
         return this.edad;
     }
     
-    // Setters
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public void setEdad(int edad) {
         if (edad >=0) {
@@ -33,6 +32,6 @@ public class Mascota {
 
     // Metodos
     public void presentar() {
-        System.out.println("Este es " + this.nombre + " y tiene " +this.edad +" añitos");
-}
+        System.out.println("Este es " + getNombre() + " y tiene " +getEdad()+" añitos");
+    }
 }

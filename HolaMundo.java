@@ -1,8 +1,12 @@
 public class HolaMundo { 
     public static void main() { 
-        Mascota m1 = new Mascota("", -1);   
-        Mascota m2 = new Mascota("Juan", 2);   
-        m1.presentar();
+        Mascota miMascota = new Mascota("Lucas", 2); 
+        Mascota m2 = new Mascota("Firu", -1);
+        
+        // Intentamos asignar una edad inválida para probar el Setter 
+        miMascota.setEdad(-5);
+
+        miMascota.presentar();
         m2.presentar();
     } 
 }

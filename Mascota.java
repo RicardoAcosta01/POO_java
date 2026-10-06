@@ -2,13 +2,23 @@ public class Mascota {
     // Atributos
     private String nombre;
     private int edad;
+    private String color;
 
     // Constructor
-    public Mascota (String nombre, int edad) {
+    public Mascota (String nombre, int edad, String color) {
         this.setNombre(nombre);
         this.setEdad(edad);
+        this.setColor(color);
     }
 
+    // Sobrecarga
+    public Mascota(String nombre, int edad) {
+        this(nombre, edad, "blanco");
+    }
+    public Mascota(String nombre) {
+        this(nombre, 0, "blanco");
+    }
+    
     // Getter & Setters
     public String getNombre() {
         return this.nombre;
@@ -20,8 +30,6 @@ public class Mascota {
     public int getEdad() {
         return this.edad;
     }
-    
-
     public void setEdad(int edad) {
         if (edad >=0) {
             this.edad = edad;
@@ -30,8 +38,15 @@ public class Mascota {
         } 
     }
 
+    public String getColor() {
+        return this.color;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     // Metodos
     public void presentar() {
-        System.out.println("Este es " + getNombre() + " y tiene " +getEdad()+" añitos");
+        System.out.println("Este es " + getNombre() + " tiene " +getEdad()+" añitos y es color "+getColor());
     }
 }

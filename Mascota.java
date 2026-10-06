@@ -18,10 +18,10 @@ public class Mascota {
 
     // Sobrecarga
     public Mascota(String nombre, int edad) {
-        this(nombre, edad, "blanco");
+        this(nombre, 0, "blanco");
     }
     public Mascota(String nombre) {
-        this(nombre, 0, "blanco");
+        this(nombre, 0);
     }
     
     // Getter & Setters

@@ -7,7 +7,7 @@ public class HolaMundo {
         Mascota m2 = new Mascota("Firu", 3  , "Cafe");
         
         System.out.println("Numero de mascotas: " + Mascota.getContadorMascotas());
-        // m1.presentar();
+        m1.presentar();
         // m2.presentar();
     }
 }

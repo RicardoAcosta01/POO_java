@@ -4,11 +4,16 @@ public class Mascota {
     private int edad;
     private String color;
 
+    // Creando Atributo static
+    private static int contadorMascotas = 0;
+
     // Constructor
     public Mascota (String nombre, int edad, String color) {
         this.setNombre(nombre);
         this.setEdad(edad);
         this.setColor(color);
+
+        contadorMascotas++;
     }
 
     // Sobrecarga
@@ -43,6 +48,10 @@ public class Mascota {
     }
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public static int getContadorMascotas() {
+        return contadorMascotas;
     }
 
     // Metodos
